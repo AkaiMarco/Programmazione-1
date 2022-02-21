@@ -64,7 +64,7 @@ int maxmin_value(tree* albero, bool get_max){
   return valore;
 }
 
-max_value(tree* albero){
+int max_value(tree* albero){
   int valore;
   while(true){
     if(albero->right == NULL){
@@ -77,7 +77,7 @@ max_value(tree* albero){
   }
 }
 
-min_value(tree* albero){
+int min_value(tree* albero){
   int valore;
   while(true){
     if(albero->left == NULL){
