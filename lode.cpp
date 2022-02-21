@@ -46,16 +46,16 @@ void print_tree(tree * root, int spazio = 0){
 }
 
 // Inserire qui sotto definizione e dichiarazione di maxmin_value
-int maxmin_value(tree* albero, bool max);
+int maxmin_value(tree* albero, bool get_max);
 int max_value(tree* albero);
 int min_value(tree* albero);
 
-int max_min_value(tree* albero, bool max){
+int maxmin_value(tree* albero, bool get_max){
   int valore;
   if(albero == NULL){
     valore = -1;
   }
-  else if(max){
+  else if(get_max){
     valore = max_value(albero);
   }
   else{
@@ -64,29 +64,19 @@ int max_min_value(tree* albero, bool max){
   return valore;
 }
 
-max_value(tree* albero){
-  int valore;
-  while(true){
-    if(albero->right == NULL){
-      valore = albero->value;
-    }
-    else{
+int max_value(tree* albero){
+  while(albero->right != NULL){
       albero = albero->right;
-    }
-    return valore;
   }
+  return albero->value;
 }
 
-min_value(tree* albero){
+int min_value(tree* albero){
   int valore;
-  while(true){
-    if(albero->left == NULL){
-      valore = albero->value;
-    }
-    else{
-      albero = albero->left;
-    }
+  while(albero->left != NULL){
+    albero = albero->left;
   }
+  return albero->value;
 }
   
       
