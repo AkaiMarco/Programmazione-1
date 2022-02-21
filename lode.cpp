@@ -86,6 +86,7 @@ min_value(tree* albero){
     else{
       albero = albero->left;
     }
+	  return valore;
   }
 }
   
