@@ -72,7 +72,6 @@ int max_value(tree* albero){
 }
 
 int min_value(tree* albero){
-  int valore;
   while(albero->left != NULL){
     albero = albero->left;
   }
