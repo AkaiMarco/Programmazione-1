@@ -135,6 +135,13 @@ void strcpy(char* a, char* b){
 }
 
 
+void strcpy2(char* a, char* b){
+  do {
+     *b++ = *a++
+  } while ( *a != '\0' );
+}
+
+
 
 //-----------------------------------------------------------
 //FINE FUNZIONI
