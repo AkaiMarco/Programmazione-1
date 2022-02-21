@@ -46,11 +46,11 @@ void print_tree(tree * root, int spazio = 0){
 }
 
 // Inserire qui sotto definizione e dichiarazione di maxmin_value
-int maxmin_value(tree* albero, bool max);
+int maxmin_value(tree* albero, bool get_max);
 int max_value(tree* albero);
 int min_value(tree* albero);
 
-int max_min_value(tree* albero, bool max){
+int maxmin_value(tree* albero, bool get_max){
   int valore;
   if(albero == NULL){
     valore = -1;
