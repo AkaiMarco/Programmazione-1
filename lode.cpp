@@ -88,7 +88,7 @@ int main() {
 		// Scommentare la linea seguente per avere comportamento
 		// deterministico
 		//
-		srand(0);
+		//srand(0);
 		tree * root = crea_tree(rand()%MAXSIZE);
 
 		std::cout << "Initial tree: " << std::endl;
